@@ -16,9 +16,9 @@
     <!-- angular will use the content div as its scope -->
     <div class="content" ng-controller="myAppController" responsive>
 
-        {{helloWorld}}
+        <p>{{helloWorld}}</p>
 
-        <!-- only show folling div if in mobile view - this ng-if statement will check the isMobile variable which is set in the controller. We are modifying this
+        <!-- only show following div if in mobile view - this ng-if statement will check the isMobile variable which is set in the controller. We are modifying this
          variable in the responsive directive and setting it to true if width < 768
          -->
         <div class="mobile-hype" ng-if="isMobile">

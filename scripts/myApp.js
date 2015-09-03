@@ -9,7 +9,7 @@ var myApp = angular.module('myApp',[])
 .controller('myAppController',function($scope){
 
     //controller will contain backend functions and variables, but we can set our own variables there too when nessecary:
-    //a boolean to tell us whether we are in mobile view or not
+    //This boolean to tell us whether we are in mobile view or not. We can use it in the template to dynamically show or hide the html
     $scope.isMobile = false;
 
     $scope.helloWorld = "Hello World!";
@@ -25,6 +25,7 @@ var myApp = angular.module('myApp',[])
 
                var smallWidth  =  768;
 
+               //setSmall will update our isMobile variable which belongs to the myApp module.
                var setSmall = function () {
                    console.log('mobile');
 
@@ -34,6 +35,7 @@ var myApp = angular.module('myApp',[])
                    })
                };
 
+               //setLarge will update our isMobile variable which belongs to the myApp module.
                var setLarge = function () {
                    console.log('desktop');
                    scope.$apply(function(){
@@ -59,10 +61,5 @@ var myApp = angular.module('myApp',[])
            }
 
        }
-
-
-
-
-
 
 });
