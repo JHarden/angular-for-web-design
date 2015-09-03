@@ -1,0 +1,45 @@
+
+html{
+
+    font-family: Ariel, sans-serif;
+    text-align: center;
+
+}
+
+.box{
+
+    outline: 2px solid #fff;
+    width:  300px;
+    height: 300px;
+    -webkit-transition: background-color 0.35s ease-in;
+    -moz-transition: background-color 0.35s ease-in;
+    -o-transition: background-color 0.35s ease-in;
+    -ms-transition: background-color 0.35s ease-in;
+    transition: background-color 0.35s ease-in;
+    margin: 0 auto;
+}
+
+.mobile-hype{
+
+    background-color:yellow;
+    width:  300px;
+    margin: 0 auto;
+}
+
+.paragraph{
+
+    padding-top: 125px;
+
+}
+
+.mobile-class{
+
+    background-color: #e8a2ff;
+    
+}
+
+.desktop-class{
+    
+    background-color: #61ff8a;
+    
+}

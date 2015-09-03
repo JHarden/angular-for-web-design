@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Angular Sandbox</title>
+</head>
+<script type="text/javascript" src="bower_components/angular/angular.js"></script>
+<script type="text/javascript" src="scripts/myApp.js"></script>
+<link rel="stylesheet" href="style/style.css">
+<body  ng-app="myApp">
+
+<header>
+    <h1>Angular Demo</h1>
+</header>
+<div class="container">
+    <!-- angular will use the content div as its scope -->
+    <div class="content" ng-controller="myAppController" responsive>
+
+        {{helloWorld}}
+
+        <!-- only show folling div if in mobile view - this ng-if statement will check the isMobile variable which is set in the controller. We are modifying this
+         variable in the responsive directive and setting it to true if width < 768
+         -->
+        <div class="mobile-hype" ng-if="isMobile">
+            <p>Hey!, we're mobile :D</p>
+        </div>
+
+        <!-- we can also use ng-class to dynamically switch classes based on some condition -->
+
+        <div class="box" ng-class="isMobile ? 'mobile-class' : 'desktop-class'">
+
+            <p class="paragraph">background colour changes from desktop to mobile</p>
+
+            <h2 ng-if="isMobile">Mobile :D</h2>
+            <h2 ng-if="!isMobile">Desktop :|</h2>
+
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>
